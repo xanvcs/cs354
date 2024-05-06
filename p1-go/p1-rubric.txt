@@ -1,0 +1,42 @@
+Grade: 83/80
+
+Rubric for Go project:
+
+Overall Comments:
+
+-Submission
+
+    - all go files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md: [5 points]
+
+	-Appropriate and explanatory comments: [5 points]
+
+	Thanks for the reflection!
+
+
+Visual Checks:
+	- Go code is organized in packages correctly [10 points] 10
+
+	- Account.go has no definition of Accrue [10 points] 8
+
+	- goroutines and channel used to calculate interest [10 points] 10
+
+	-Other comments:
+
+	Even an empty definition is still a definition -2
+
+
+Automated Checks:
+	- run-test.sh output completes successfully [40 points] 40 
+
+
+Extra Credit:
+    - Program outputs "4: bob: 1000.00" after 1000 parallel deposits [5 points] 5
+
+	Good solution
+4d3
+< 4: bob: 1000.00
