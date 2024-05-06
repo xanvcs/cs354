@@ -1,0 +1,8 @@
+.input-placeholder:focus::placeholder {
+    opacity: 0;
+}
+
+input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: none;
+}

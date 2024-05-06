@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag 'form' %>
+<div class="form-container">
+  <%= form_with(model: @post, local: true) do |form| %>
+    <% if @post.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+        <ul>
+          <% @post.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-content flex flex-col">
+      <h1 class="text-lg font-medium mt-2"> What's on your mind? </h1>
+      <div class="mt-3">
+        <%= form.text_area :body, placeholder: "type your thoughts!", class: "bg-gray-100 resize-none mt-1 p-4 h-32 border-none rounded-lg shadow-sm focus:outline-none focus:ring-purple-400 focus:border-purple-400 sm:text-sm" %>
+      </div>
+
+      <div class="mt-2 ml-auto flex items-center">
+        <%= form.label :image, class: "image-upload mr-2" do %>
+          <%= image_tag("upload-icon.png", alt: "upload image", width: 22, height: 22, class: "mr-1") %>
+          <%= form.file_field :image, class:"hidden" %>
+        <% end %>
+
+        <%= image_submit_tag("post.png", alt: "Submit", width: 19, height: 19, class: "mr-1") %>
+      </div>
+    </div>
+
+    <%= form.hidden_field :likes, value: @post.new_record? ? 0 : @post.likes %>
+  <% end %>
+</div>

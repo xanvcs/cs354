@@ -1,0 +1,60 @@
+Grade: 40/40
+
+Rubric for ia3:
+
+Overall Comments:
+readme updated
+all tests pass
+-Submission
+
+    - all files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md has been updated with a new reflection: [5 points]
+
+Automated Checks:
+
+	- eval.EvaluationTest passes (I'll run mine too!) [35 points]
+
+1.0
+3.0
+1.6666666666666667
+4.0
+3.0
+-2.0
+3.0
+1.0
+2.0
+[1m╷[0m
+[1m├─[0m [1mJUnit Jupiter[0m [1m✔[0m
+[1m│  └─[0m [1mGrader[0m [1m✔[0m
+[1m│     ├─[0m [0mtestOperators()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestAssociation2()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestAssociation3()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestRecursivity()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestAssociation()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestSyntaxError()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestIncrement()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestPrecedence()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestAssignment()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestIncrement2()[0m [1m✔[0m
+[1m│     └─[0m [0mtestEvalError()[0m [1m✔[0m
+[1m├─[0m [1mJUnit Vintage[0m [1m✔[0m
+[1m└─[0m [1mJUnit Platform Suite[0m [1m✔[0m
+
+Test run finished after 400 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        11 tests found           ]
+[         0 tests skipped         ]
+[        11 tests started         ]
+[         0 tests aborted         ]
+[        11 tests successful      ]
+[         0 tests failed          ]
+

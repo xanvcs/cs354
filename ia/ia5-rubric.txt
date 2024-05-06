@@ -1,0 +1,453 @@
+Grade: /40
+
+Rubric for ia5:
+
+Overall Comments:
+
+-Submission
+
+    - all files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md has been updated with a new reflection: [5 points]
+
+Automated Checks:
+
+	- Tests for static scope pass (I'll run mine too!) [35 points]
+
+
+Extra Credit [30 points]
+
+    - Function Definitions, calls and recursion work [10 points]
+    - Nested function definitions and static scope work correctly [10 points]
+    - Functions can be passed as parameters and returned from other functions [10 points]
+    
+    Your program outputs a lot of tokens it appears! 
+
+    All of the tests from this part pass, well done.
+├─ JUnit Jupiter ✔
+│  └─ EvaluationPackageTest ✔
+│     ├─ testAssignment() ✔
+│     ├─ testEvalError() ✔
+│     ├─ testAssociation() ✔
+│     ├─ testAssociation2() ✔
+│     ├─ testPrecedence() ✔
+│     ├─ testUnaryNeg() ✔
+│     ├─ testBadStmt() ✔
+│     ├─ testRd() ✔
+│     ├─ testRdBad() ✘ var x; rd x; wr x ==> Unexpected exception type thrown, expected: <eval.EvalException> but was: <java.util.InputMismatchException>
+│     ├─ testRdWhile() ✔
+│     ├─ testFib() ✔
+│     ├─ testGCD() ✔
+│     ├─ testIfNoElse() ✔
+│     ├─ testIfNoElseEquals() ✔
+│     ├─ testIfNoElseGTE() ✔
+│     ├─ testBoolBad() ✔
+│     ├─ testDanglingElse1() ✔
+│     ├─ testDanglingElse2() ✔
+│     ├─ testDanglingElse3() ↷ void EvaluationPackageTest.testDanglingElse3() throws syntax.SyntaxException,eval.EvalException is @Disabled
+│     ├─ testDecl() ✔
+│     ├─ testDecl2() ✔
+│     ├─ testBlockScopeFindLocal() ✔
+│     ├─ testBlockScopeFindLocal2() ✔
+│     ├─ testBlockScopeFindLocal3() ✔
+│     ├─ testBlockScopeFindLocal4() ✔
+│     ├─ testFunctionDeclaration() ✘ syntax error, pos=17, expected=<=,=>, found=<id,foo>
+│     ├─ testFunctionAssignment() ↷ void EvaluationPackageTest.testFunctionAssignment() throws syntax.SyntaxException is @Disabled
+│     ├─ testFunctionCall() ✘ syntax error, pos=17, expected=<=,=>, found=<id,foo>
+│     ├─ testNestedFunctionDefinition() ✘ syntax error, pos=17, expected=<=,=>, found=<id,foo>
+│     ├─ testNonFunctionCall() ✘ syntax error, pos=13, expected=<=,=>, found=<(,(>
+│     ├─ testFunctionScope() ✘ syntax error, pos=17, expected=<=,=>, found=<id,foo>
+│     ├─ testNestedBinding() ✘ syntax error, pos=17, expected=<=,=>, found=<id,foo>
+│     ├─ testNotDynamic() ✘ syntax error, pos=5, expected=<=,=>, found=<id,a>
+│     ├─ testFunctionRecursion() ✘ syntax error, pos=13, expected=<=,=>, found=<id,printDown>
+│     ├─ testFibonacci() ✘ syntax error, pos=7, expected=<=,=>, found=<id,fib>
+│     ├─ testStaticLinks() ✘ syntax error, pos=5, expected=<=,=>, found=<id,c>
+│     ├─ testNestedNameRedefinition() ✘ syntax error, pos=5, expected=<=,=>, found=<id,c>
+│     ├─ testStaticLinks2() ✘ syntax error, pos=5, expected=<=,=>, found=<id,a>
+│     ├─ testFunctionParameter() ✘ syntax error, pos=13, expected=<=,=>, found=<id,printDown>
+│     ├─ testFunctionReturn() ✘ syntax error, pos=5, expected=<=,=>, found=<id,a>
+│     ├─ testAnonymousDeclaration() ✘ syntax error, pos=13, expected=<EOF,EOF>, found=<(,(>
+│     ├─ testFunctionCombinedNumber() ✘ syntax error, pos=13, expected=<EOF,EOF>, found=<(,(>
+│     ├─ testFunctionCombinedNumber2() ✘ syntax error, pos=13, expected=<EOF,EOF>, found=<(,(>
+│     ├─ testNumberCall() ✘ syntax error, pos=13, expected=<=,=>, found=<(,(>
+│     ├─ testAnonymousAssignment() ✘ syntax error, pos=16, expected=<EOF,EOF>, found=<(,(>
+│     ├─ testImplicitFunctionReturn() ✘ syntax error, pos=5, expected=<=,=>, found=<id,a>
+│     ├─ testClosure() ✘ syntax error, pos=5, expected=<=,=>, found=<id,a>
+│     ├─ testAbs() ✘ syntax error, pos=7, expected=<=,=>, found=<id,abs>
+│     ├─ testIdCreateScopeDeclareIdSameLexeme2() ✔
+│     ├─ testNewtonsMethod() ✘ syntax error, pos=8, expected=<=,=>, found=<id,sqrt>
+│     └─ testIdCreateScopeDeclareIdSameLexeme() ✘ var x=2; begin var x=5;begin x=9 end end ==> expected: <9.0> but was: <5.0>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (25):
+  JUnit Jupiter:EvaluationPackageTest:testRdBad()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testRdBad', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: var x; rd x; wr x ==> Unexpected exception type thrown, expected: <eval.EvalException> but was: <java.util.InputMismatchException>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:39)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3099)
+       EvaluationPackageTest.testRdBad(EvaluationPackageTest.java:122)
+       [...]
+     Caused by: java.util.InputMismatchException
+       java.base/java.util.Scanner.throwFor(Scanner.java:947)
+       java.base/java.util.Scanner.next(Scanner.java:1602)
+       java.base/java.util.Scanner.nextDouble(Scanner.java:2573)
+       node.NodeRd.eval(NodeRd.java:32)
+       node.NodeBlock.eval(NodeBlock.java:41)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionDeclaration()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionDeclaration', methodParameterTypes = '']
+    => syntax error, pos=17, expected=<=,=>, found=<id,foo>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFunctionDeclaration(EvaluationPackageTest.java:426)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionCall()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionCall', methodParameterTypes = '']
+    => syntax error, pos=17, expected=<=,=>, found=<id,foo>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFunctionCall(EvaluationPackageTest.java:461)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNestedFunctionDefinition()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNestedFunctionDefinition', methodParameterTypes = '']
+    => syntax error, pos=17, expected=<=,=>, found=<id,foo>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNestedFunctionDefinition(EvaluationPackageTest.java:481)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNonFunctionCall()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNonFunctionCall', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<=,=>, found=<(,(>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNonFunctionCall(EvaluationPackageTest.java:491)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionScope()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionScope', methodParameterTypes = '']
+    => syntax error, pos=17, expected=<=,=>, found=<id,foo>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFunctionScope(EvaluationPackageTest.java:514)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNestedBinding()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNestedBinding', methodParameterTypes = '']
+    => syntax error, pos=17, expected=<=,=>, found=<id,foo>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNestedBinding(EvaluationPackageTest.java:532)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNotDynamic()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNotDynamic', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,a>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNotDynamic(EvaluationPackageTest.java:551)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionRecursion()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionRecursion', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<=,=>, found=<id,printDown>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFunctionRecursion(EvaluationPackageTest.java:570)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFibonacci()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFibonacci', methodParameterTypes = '']
+    => syntax error, pos=7, expected=<=,=>, found=<id,fib>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFibonacci(EvaluationPackageTest.java:587)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testStaticLinks()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testStaticLinks', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,c>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testStaticLinks(EvaluationPackageTest.java:610)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNestedNameRedefinition()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNestedNameRedefinition', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,c>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNestedNameRedefinition(EvaluationPackageTest.java:628)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testStaticLinks2()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testStaticLinks2', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,a>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testStaticLinks2(EvaluationPackageTest.java:648)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionParameter()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionParameter', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<=,=>, found=<id,printDown>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFunctionParameter(EvaluationPackageTest.java:669)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionReturn()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionReturn', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,a>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testFunctionReturn(EvaluationPackageTest.java:690)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testAnonymousDeclaration()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testAnonymousDeclaration', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<EOF,EOF>, found=<(,(>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parse(Parser.java:26)
+       EvaluationPackageTest.testAnonymousDeclaration(EvaluationPackageTest.java:707)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionCombinedNumber()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionCombinedNumber', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<EOF,EOF>, found=<(,(>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parse(Parser.java:26)
+       EvaluationPackageTest.testFunctionCombinedNumber(EvaluationPackageTest.java:721)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testFunctionCombinedNumber2()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testFunctionCombinedNumber2', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<EOF,EOF>, found=<(,(>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parse(Parser.java:26)
+       EvaluationPackageTest.testFunctionCombinedNumber2(EvaluationPackageTest.java:737)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNumberCall()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNumberCall', methodParameterTypes = '']
+    => syntax error, pos=13, expected=<=,=>, found=<(,(>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parseBlock(Parser.java:300)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNumberCall(EvaluationPackageTest.java:749)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testAnonymousAssignment()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testAnonymousAssignment', methodParameterTypes = '']
+    => syntax error, pos=16, expected=<EOF,EOF>, found=<(,(>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parse(Parser.java:26)
+       EvaluationPackageTest.testAnonymousAssignment(EvaluationPackageTest.java:767)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+       org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testImplicitFunctionReturn()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testImplicitFunctionReturn', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,a>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testImplicitFunctionReturn(EvaluationPackageTest.java:783)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testClosure()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testClosure', methodParameterTypes = '']
+    => syntax error, pos=5, expected=<=,=>, found=<id,a>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testClosure(EvaluationPackageTest.java:802)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testAbs()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testAbs', methodParameterTypes = '']
+    => syntax error, pos=7, expected=<=,=>, found=<id,abs>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testAbs(EvaluationPackageTest.java:810)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testNewtonsMethod()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testNewtonsMethod', methodParameterTypes = '']
+    => syntax error, pos=8, expected=<=,=>, found=<id,sqrt>
+       syntax.Scanner.match(Scanner.java:309)
+       syntax.Parser.match(Parser.java:324)
+       syntax.Parser.parseAssn(Parser.java:281)
+       syntax.Parser.parseStmt(Parser.java:262)
+       syntax.Parser.parseBlock(Parser.java:293)
+       syntax.Parser.parse(Parser.java:25)
+       EvaluationPackageTest.testNewtonsMethod(EvaluationPackageTest.java:832)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       [...]
+  JUnit Jupiter:EvaluationPackageTest:testIdCreateScopeDeclareIdSameLexeme()
+    MethodSource [className = 'EvaluationPackageTest', methodName = 'testIdCreateScopeDeclareIdSameLexeme', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: var x=2; begin var x=5;begin x=9 end end ==> expected: <9.0> but was: <5.0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:926)
+       EvaluationPackageTest.testIdCreateScopeDeclareIdSameLexeme(EvaluationPackageTest.java:842)
+       java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+       java.base/java.lang.reflect.Method.invoke(Method.java:578)
+       org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)
+       org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+       [...]
+
+Test run finished after 109 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        51 tests found           ]
+[         2 tests skipped         ]
+[        49 tests started         ]
+[         0 tests aborted         ]
+[        24 tests successful      ]
+[        25 tests failed          ]
+

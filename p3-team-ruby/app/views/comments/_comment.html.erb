@@ -1,0 +1,18 @@
+<div class="flex flex-col justify-between h-full">
+  <div>
+    <p class="text-lg font-semibold text-start">
+      <%= comment.user.email.split("@").first %>
+    </p>
+    <p class="text-xs text-gray-300 mb-2 text-left">
+      <%= comment.created_at.strftime("%B %e, %Y %l:%M %p") %>
+    </p>
+    <p class="text-left mt-4"><%= comment.content %></p>
+  </div>
+  <% if user_signed_in? && current_user == comment.user %>
+    <div class="self-end">
+      <%= button_to [comment.post, comment], method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <%= image_tag 'delete.png', alt: 'Delete Comment', width: 20, height: 20, class: "mb-[-20px]" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,58 @@
+Grade: 40/40
+
+Rubric for ia1:
+
+Overall Comments:
+
+-Submission
+
+    - all files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md has been added: [5 points]
+
+  Thanks for the reflection, glad that you enjoyed! 
+
+
+Visual Checks:
+	- next() has been completed and can recognize Tokens found in grammar1.txt [5 points]
+
+	- Additional tests have been added to syntax.ScannerTest.java [5 points]
+
+	- comments are implemented and tested [5 points]
+
+	-Other comments:
+
+
+Automated Checks:
+	- run-test.sh demonstrates that all unit tests run [20 points] 20
+
+[1m╷[0m
+[1m├─[0m [1mJUnit Jupiter[0m [1m✔[0m
+[1m│  └─[0m [1mScannerAdvanced[0m [1m✔[0m
+[1m│     ├─[0m [0mtestOperators()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestIntDouble()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestProgramStmt()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestDoubleNoDecimal()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestMultipleIdentifiers()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestDoubleDouble()[0m [1m✔[0m
+[1m│     └─[0m [0mtestDoublePeriod()[0m [1m✔[0m
+[1m├─[0m [1mJUnit Vintage[0m [1m✔[0m
+[1m└─[0m [1mJUnit Platform Suite[0m [1m✔[0m
+
+Test run finished after 34 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         7 tests found           ]
+[         0 tests skipped         ]
+[         7 tests started         ]
+[         0 tests aborted         ]
+[         7 tests successful      ]
+[         0 tests failed          ]
+

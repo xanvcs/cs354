@@ -1,0 +1,50 @@
+Grade: 40/40
+
+Rubric for ia2:
+
+Overall Comments:
+
+-Submission
+
+    - all files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md has been updated with a new reflection: [5 points]
+
+    Thanks for your feedback! I am always happy when students enjoy an assignment.
+
+Automated Checks:
+
+	- Your parser outputs the correct trees for expressions like ((x)) and x + 1 / 2 [35 points]
+
+    Excellent. 
+
+PASSED
+PASSED
+PASSED
+[1m╷[0m
+[1m├─[0m [1mJUnit Jupiter[0m [1m✔[0m
+[1m│  └─[0m [1mParserGrader[0m [1m✔[0m
+[1m│     ├─[0m [0mtestSyntax_1()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestAll()[0m [1m✔[0m
+[1m│     ├─[0m [0mtestAddition()[0m [1m✔[0m
+[1m│     └─[0m [0mtestIdentifier()[0m [1m✔[0m
+[1m├─[0m [1mJUnit Vintage[0m [1m✔[0m
+[1m└─[0m [1mJUnit Platform Suite[0m [1m✔[0m
+
+Test run finished after 35 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[         4 tests found           ]
+[         0 tests skipped         ]
+[         4 tests started         ]
+[         0 tests aborted         ]
+[         4 tests successful      ]
+[         0 tests failed          ]
+
